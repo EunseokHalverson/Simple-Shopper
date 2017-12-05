@@ -89,17 +89,17 @@
                     <navigationItem key="navigationItem" title="Hui's Shop" id="kB5-DB-eIv"/>
                     <connections>
                         <outlet property="tableView" destination="pRY-Zy-mut" id="DAJ-YI-Brb"/>
-                        <segue destination="0n8-MG-XwH" kind="show" id="vK6-ig-Og3"/>
+                        <segue destination="0n8-MG-XwH" kind="show" identifier="ProductVC" id="vK6-ig-Og3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="372" y="31.934032983508249"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductVC-->
         <scene sceneID="ogi-uf-s9B">
             <objects>
-                <viewController id="0n8-MG-XwH" sceneMemberID="viewController">
+                <viewController id="0n8-MG-XwH" customClass="ProductVC" customModule="Simple_Shopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tga-og-q5F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +124,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8EH-Jg-I0f">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="8EH-Jg-I0f" customClass="ProductCell" customModule="Simple_Shopper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="175" height="257"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -164,6 +164,11 @@
                                             <constraint firstItem="qh4-KV-SBT" firstAttribute="leading" secondItem="8EH-Jg-I0f" secondAttribute="leadingMargin" constant="1" id="sBg-Yi-DbX"/>
                                             <constraint firstItem="qh4-KV-SBT" firstAttribute="top" secondItem="cYT-Oy-MtR" secondAttribute="bottom" constant="9" id="w0m-N4-hwa"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="productImage" destination="cYT-Oy-MtR" id="QRV-3S-n4v"/>
+                                            <outlet property="productPrice" destination="nAR-0f-Qb1" id="QCN-Ba-eP3"/>
+                                            <outlet property="productTitle" destination="qh4-KV-SBT" id="5Yb-IV-6C8"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -179,6 +184,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nIM-qq-O5f"/>
                     </view>
+                    <connections>
+                        <outlet property="productsCollection" destination="6Lf-Qy-NeK" id="n8e-FJ-hUA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHS-m6-0IW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
